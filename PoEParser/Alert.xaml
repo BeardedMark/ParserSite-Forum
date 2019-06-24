@@ -1,0 +1,15 @@
+﻿<Window x:Class="PoEParser.Alert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoEParser"
+        mc:Ignorable="d"
+        Title="Alert" Height="94" Width="300" Background="#FF1E1E1E" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <Label Content="Hello all. My name is Mark" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Foreground="Green"/>
+        <Label x:Name="lab1" Content="New comment" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="DimGray" FontWeight="Bold" FontSize="24"/>
+        <Image HorizontalAlignment="Left" Height="10" Margin="280,10,0,0" VerticalAlignment="Top" Width="10" Source="img/close.png" MouseDown="Image_MouseDown" Cursor="Hand"/>
+
+    </Grid>
+</Window>

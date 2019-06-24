@@ -1,0 +1,39 @@
+﻿<Window x:Class="PoEParser.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoEParser"
+        mc:Ignorable="d"
+        Title="Settings" Height="366" Width="578">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="121*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Paste the link and press enter" Grid.Column="1" VerticalAlignment="Top" Margin="10,10,10,0"/>
+        <TextBox x:Name="texturl" Grid.Column="1" Height="23" Margin="10,41,10,0" TextWrapping="Wrap" VerticalAlignment="Top" KeyDown="texturl_KeyDown" />
+        <ListBox x:Name="listurl" Grid.Column="1" Height="230" Margin="10,69,10,0" VerticalAlignment="Top" KeyDown="listurl_KeyDown"/>
+
+        <StackPanel Margin="10">
+            <Label Content="Select your language" VerticalAlignment="Top" Margin="0,0,0,5"/>
+            <ComboBox x:Name="CB_language" VerticalAlignment="Top" Height="23" SelectedIndex="0"/>
+
+            <Label Content="Update interval" VerticalAlignment="Top" Margin="0,5,0,5"/>
+            <ComboBox x:Name="CB_interval" VerticalAlignment="Top" Height="23" SelectedIndex="1"/>
+
+            <Label Content="Display settings" VerticalAlignment="Top" Margin="0,5,0,5"/>
+            <CheckBox x:Name="Title" Content="Title" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Autor" Content="Autor" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Views" Content="Views" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Comments" Content="Comments" VerticalAlignment="Top"/>
+        </StackPanel>
+        
+
+        <Button Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="278,304,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Cancel" Grid.Column="1" HorizontalAlignment="Left" Margin="198,304,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+    </Grid>
+</Window>

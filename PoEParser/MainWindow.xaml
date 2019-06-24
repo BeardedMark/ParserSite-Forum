@@ -1,0 +1,33 @@
+﻿<Window x:Class="PoEParser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoEParser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="442" Width="172" Background="#FF1E1E1E" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" BorderBrush="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Border BorderBrush="Black" BorderThickness="1" Grid.RowSpan="2"/>
+
+        <Grid VerticalAlignment="Top" Margin="4" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="14"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="3" Source="img/close.png" Stretch="None" Cursor="Hand" MouseDown="Image_MouseDown_1"/>
+            <Image Grid.Column="2" Source="img/refresh.png" Stretch="None" MouseDown="Image_MouseDown" Cursor="Hand"/>
+            <Image Grid.Column="1" Source="img/option.png" Stretch="None" Cursor="Hand" MouseDown="Image_MouseDown_3"/>
+            <Image Grid.Column="0" Source="img/take.png" Margin="4,0,4,0" Stretch="None" VerticalAlignment="Center" Cursor="SizeAll" MouseDown="Image_MouseDown_2"/>
+        </Grid>
+        <StackPanel x:Name="mainstack" Grid.Row="1"/>
+
+    </Grid>
+</Window>
